@@ -1,0 +1,109 @@
+body {
+    font-family:'Segoe UI';
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #ffffff;
+  }
+
+  header {
+    background-color: #383838;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .box {
+    background: #383838;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .ratio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .aspect-box {
+    position: relative;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .aspect-box:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 1s;
+  }
+
+  .aspect-box::before {
+    content: "";
+    display: block;
+    width: 100%;
+  }
+
+  .aspect-box:nth-child(1) {
+    background-color: #289cd7;
+  }
+  .aspect-box:nth-child(2) {
+    background-color: #775ad8;
+  }
+
+  .aspect-box:nth-child(3) {
+    background-color: #A65BD9;
+  }
+
+  .aspect-box:nth-child(4) {
+    background-color: #5268D7;
+  }
+
+  .aspect-box:nth-child(5) {
+    background-color: #4183D7;
+  }
+
+  .aspect-box:nth-child(6) {
+    background-color: #df4cbf;
+  }
+
+
+  .aspect-box[data-ratio="16/9"]::before { padding-top: 56.25%; }
+  .aspect-box[data-ratio="4/3"]::before { padding-top: 75%; }
+  .aspect-box[data-ratio="1/1"]::before { padding-top: 100%; }
+  .aspect-box[data-ratio="21/9"]::before { padding-top: 42.85%; }
+  .aspect-box[data-ratio="3/2"]::before { padding-top: 66.66%; }
+  .aspect-box[data-ratio="9/16"]::before { padding-top: 177.77%; }
+
+  
+  
+
+  .label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(241, 149, 149, 0.7);
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    background-color: #383838;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
